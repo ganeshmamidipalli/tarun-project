@@ -1,10 +1,10 @@
 // Chatbot Configuration
 const CHATBOT_CONFIG = {
-    openrouterApiKey: 'YOUR_OPENROUTER_API_KEY', // Replace with your actual API key
+    openrouterApiKey: process.env.OPENROUTER_API_KEY || 'YOUR_OPENROUTER_API_KEY', // Use environment variable or fallback
     openrouterUrl: 'https://openrouter.ai/api/v1/chat/completions',
-    model: 'openai/gpt-3.5-turbo',
-    maxTokens: 500,
-    temperature: 0.7
+    model: process.env.CHATBOT_MODEL || 'openai/gpt-3.5-turbo',
+    maxTokens: parseInt(process.env.CHATBOT_MAX_TOKENS) || 500,
+    temperature: parseFloat(process.env.CHATBOT_TEMPERATURE) || 0.7
 };
 
 // Comprehensive Dummy Knowledge Base for Data Analytics & Engineering
