@@ -31,10 +31,5 @@
         }
       ]
     }
-  ],
-  "functions": {
-    "api/chatbot.js": {
-      "runtime": "nodejs18.x"
-    }
-  }
+  ]
 }
